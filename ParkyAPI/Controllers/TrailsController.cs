@@ -12,8 +12,10 @@ using ParkyAPI.Repository.IRepository;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/Trails")]
+    //[Route("api/Trails")]
+    [Route("api/v{version:apiVersion}/trails")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrails")]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public class TrailsController : Controller
     {
@@ -70,6 +72,27 @@ namespace ParkyAPI.Controllers
             return Ok(objDto);
         }
 
+        [HttpGet("[action]/{nationalParkId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TrailDto))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
+        public IActionResult GetTrailInNationalPark(int nationalParkId)
+        {
+            var ObjList = _trailRepo.GetTrailsInNationalPark(nationalParkId);
+
+            if (ObjList == null)
+            {
+                return NotFound();
+            }
+            var tList = new List<TrailDto>();
+            foreach(var obj in ObjList)
+            {
+                tList.Add(_mapper.Map<TrailDto>(obj));
+            }
+         
+            return Ok(tList);
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(TrailDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -100,7 +123,7 @@ namespace ParkyAPI.Controllers
                 return StatusCode(500, ModelState);
             }
 
-            return CreatedAtRoute("GetTrail", new { trailId = trailObj.Id},trailObj);
+            return CreatedAtRoute("GetTrail",new{trailId = trailObj.Id},trailObj);
         }
 
         [HttpPatch("{trailId:int}", Name = "UpdateTrail")]

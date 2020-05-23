@@ -57,7 +57,9 @@ D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.xml
+D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 D:\ParkyAPI\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.csproj.CoreCompileInputs.cache
 D:\ParkyAPI\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\ParkyAPI\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cache
-D:\ParkyAPI\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.xml
