@@ -23,6 +23,5 @@ namespace ParkyAPI.Models
         [ForeignKey("NationalParkId")]
         public NationalPark NationalPark { get; set; }
 
-
     }
 }
